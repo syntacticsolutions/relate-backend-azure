@@ -6,8 +6,10 @@ const app = express();
 
 // Setup your express routes
 
-app.use('/__/auth', express.static(path.join(__dirname, 'auth')));
+app.use("/__/auth", express.static(path.join(__dirname, "auth")));
 app.use("/__/firebase", express.static("firebase"));
+
+app.use("/auth", express.static(path.join(__dirname, "auth")));
 
 // More routes and middleware can be added here
 
